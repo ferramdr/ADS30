@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio | Sistema Vehicular</title>
+  <link rel="stylesheet" href="f1_estilo.css" />
+</head>
+
+<body>
+  <header class="main-header">
+    <div class="logo">Control Vehicular</div>
+    <nav class="main-nav">
+      <a href="F_conductores.html">Conductores</a>
+      <a href="F_vehiculos.html">Vehículos</a>
+      <a href="F_licencias.html">Licencias</a>
+      <a href="F_multas.html">Multas</a>
+      <a href="F_pagos.html">Pagos</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <h1>Bienvenido al Sistema de Control Vehicular</h1>
+    <p>Selecciona una opción del menú para comenzar.</p>
+  </section>
+
+  <main class="content">
+    <div class="slider">
+      <div class="slide"><img
+          src="https://cimg1.ibsrv.net/cimg/www.rennlist.com/1600x900_85-1/69/Porsche-01-184069.jpg" /></div>
+      <div class="slide"><img
+          src="https://cimg2.ibsrv.net/cimg/www.rennlist.com/1600x900_85-1/74/Porsche-05-184074.jpg" /></div>
+      <div class="slide"><img
+          src="https://cimg3.ibsrv.net/cimg/www.rennlist.com/1600x900_85-1/79/Porsche-07-184079.jpg" /></div>
+    </div>
+  </main>
+  <script>
+    const slides = document.querySelectorAll(".slide");
+    let index = 0;
+    setInterval(() => {
+      slides.forEach((s, i) => s.style.display = i === index ? "block" : "none");
+      index = (index + 1) % slides.length;
+    }, 3000);
+  </script>
+</body>
+
+</html>
